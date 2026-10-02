@@ -1,0 +1,7 @@
+﻿<resources>
+    <string name="app_name">FBVD</string>
+    <string name="paste_hint">Paste Facebook Reel/Video URL</string>
+    <string name="btn_download">Download</string>
+    <string name="history_title">Recent Downloads (Last 10)</string>
+    <string name="no_history">No downloads yet.</string>
+</resources>
