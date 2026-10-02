@@ -1,9 +1,22 @@
-﻿<resources>
-    <color name="primary">#1877F2</color>
-    <color name="primary_variant">#145dbf</color>
-    <color name="background">#F0F2F5</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="text_primary">#050505</color>
-    <color name="text_secondary">#65676B</color>
-    <color name="danger">#E41E3F</color>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand & Accent -->
+    <color name="primary">#0866FF</color>
+    <color name="primary_dark">#0055D4</color>
+    <color name="primary_soft">#EBF3FF</color>
+    <color name="accent_teal">#00A884</color>
+
+    <!-- Surfaces & Neutrals -->
+    <color name="screen_bg">#F6F8FA</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_stroke">#E1E4E8</color>
+    
+    <!-- Text Colors -->
+    <color name="text_main">#1C1E21</color>
+    <color name="text_muted">#65676B</color>
+    <color name="text_subtle">#8D949E</color>
+
+    <!-- Actions -->
+    <color name="danger">#FA383E</color>
+    <color name="danger_soft">#FEECEE</color>
 </resources>
