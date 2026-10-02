@@ -6,9 +6,8 @@
         <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">#FFFFFF</item>
 
-        <!-- Window & Status Bar -->
+        <!-- Window & Status Bar adapt automatically -->
         <item name="android:statusBarColor">@color/card_bg</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowBackground">@color/screen_bg</item>
     </style>
 </resources>
