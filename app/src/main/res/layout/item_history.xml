@@ -1,131 +1,160 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/bg_card"
-    android:layout_marginBottom="8dp"
-    android:padding="12dp">
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
 
     <LinearLayout
-        android:id="@+id/rowHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/tvMainSummary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Video Title / Reel"
-            android:textColor="@color/text_primary"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:maxLines="1"
-            android:ellipsize="end" />
-
-        <ImageView
-            android:id="@+id/btnCopyAll"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="6dp"
-            android:src="@drawable/ic_content_copy"
-            android:contentDescription="Copy All"
-            android:background="?selectableItemBackgroundBorderless" />
-
-        <ImageView
-            android:id="@+id/btnDelete"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="8dp"
-            android:padding="6dp"
-            android:src="@drawable/ic_close"
-            android:contentDescription="Delete Entry"
-            android:background="?selectableItemBackgroundBorderless" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutExpanded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_marginTop="8dp">
+        android:padding="14dp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E0E0E0"
-            android:layout_marginBottom="8dp" />
-
+        <!-- Collapsed Row (Main Header) -->
         <LinearLayout
+            android:id="@+id/rowHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
+
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvMainSummary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Title"
-                android:textSize="13sp"
-                android:textColor="@color/text_primary" />
+                android:text="Video Title / Reel"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Copy All Button -->
             <ImageView
-                android:id="@+id/btnCopyTitle"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:id="@+id/btnCopyAll"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:padding="6dp"
                 android:src="@drawable/ic_content_copy"
-                android:background="?selectableItemBackgroundBorderless" />
+                android:background="@drawable/bg_icon_button"
+                android:contentDescription="Copy All"
+                app:tint="@color/primary" />
+
+            <!-- Delete Button -->
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_close"
+                android:background="@drawable/bg_delete_button"
+                android:contentDescription="Delete"
+                app:tint="@color/danger" />
         </LinearLayout>
 
+        <!-- Expanded Detail Container -->
         <LinearLayout
+            android:id="@+id/layoutExpanded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="6dp">
-            <TextView
-                android:id="@+id/tvDescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Description"
-                android:textSize="13sp"
-                android:textColor="@color/text_secondary" />
-            <ImageView
-                android:id="@+id/btnCopyDesc"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:padding="6dp"
-                android:src="@drawable/ic_content_copy"
-                android:background="?selectableItemBackgroundBorderless" />
-        </LinearLayout>
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="6dp">
-            <TextView
-                android:id="@+id/tvHashtags"
-                android:layout_width="0dp"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/card_stroke"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Title Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="#hashtags"
-                android:textSize="13sp"
-                android:textColor="@color/primary" />
-            <ImageView
-                android:id="@+id/btnCopyHashtags"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:padding="6dp"
-                android:src="@drawable/ic_content_copy"
-                android:background="?selectableItemBackgroundBorderless" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Title text"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/btnCopyTitle"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_content_copy"
+                    android:background="@drawable/bg_icon_button"
+                    app:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <!-- Description Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description text"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/btnCopyDesc"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_content_copy"
+                    android:background="@drawable/bg_icon_button"
+                    app:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <!-- Hashtags Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvHashtags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="#reels #video"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btnCopyHashtags"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_content_copy"
+                    android:background="@drawable/bg_icon_button"
+                    app:tint="@color/text_muted" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
