@@ -3,11 +3,13 @@
     <!-- Brand & Accent -->
     <color name="primary">#0866FF</color>
     <color name="primary_dark">#0055D4</color>
+    <color name="primary_variant">#0055D4</color>
     <color name="primary_soft">#EBF3FF</color>
     <color name="accent_teal">#00A884</color>
 
     <!-- Surfaces & Neutrals -->
     <color name="screen_bg">#F6F8FA</color>
+    <color name="background">#F6F8FA</color>
     <color name="card_bg">#FFFFFF</color>
     <color name="card_stroke">#E1E4E8</color>
     
