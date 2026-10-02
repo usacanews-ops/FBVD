@@ -1,8 +1,14 @@
-﻿<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="Theme.FBVD" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Main Brand Colors -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_variant</item>
-        <item name="android:statusBarColor">@color/primary_variant</item>
-        <item name="android:windowBackground">@color/background</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Window & Status Bar -->
+        <item name="android:statusBarColor">@color/card_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/screen_bg</item>
     </style>
 </resources>
