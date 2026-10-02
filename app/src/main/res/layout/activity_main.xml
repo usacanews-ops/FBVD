@@ -153,31 +153,19 @@
                 android:clipToPadding="false"
                 android:overScrollMode="never" />
 
-            <LinearLayout
+            <!-- Reverted to standard TextView with styled empty state -->
+            <TextView
                 android:id="@+id/tvEmptyState"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical"
+                android:text="No downloads yet\nShared or downloaded links will appear here"
+                android:textAlignment="center"
                 android:gravity="center"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No downloads yet"
-                    android:textColor="@color/text_main"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Shared or downloaded links will appear here"
-                    android:textColor="@color/text_muted"
-                    android:textSize="13sp" />
-            </LinearLayout>
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:visibility="gone" />
         </FrameLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
