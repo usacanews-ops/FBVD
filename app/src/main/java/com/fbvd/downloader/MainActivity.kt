@@ -1,4 +1,4 @@
-﻿package com.fbvd.downloader
+package com.fbvd.downloader
 
 import android.app.DownloadManager
 import android.content.ClipData
@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -189,8 +190,11 @@ class MainActivity : AppCompatActivity() {
             holder.layoutExpanded.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
 
             holder.itemView.setOnClickListener {
-                item.isExpanded = !item.isExpanded
-                notifyItemChanged(holder.bindingAdapterPosition)
+                val currentPos = holder.bindingAdapterPosition
+                if (currentPos != RecyclerView.NO_POSITION) {
+                    items[currentPos].isExpanded = !items[currentPos].isExpanded
+                    notifyItemChanged(currentPos)
+                }
             }
 
             holder.btnCopyAll.setOnClickListener {
